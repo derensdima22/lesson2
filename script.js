@@ -25,10 +25,10 @@ console.log(`What's up ${firstName} ${lastNane}`);
 const x = +prompt("Введите первое число");
 const y = +prompt("Введите второе число");
 
-console.log(`Произведение ${Math.round(x * y)}`);
-console.log(`Частное ${Math.round(x / y)}`);
-console.log(`Разность ${Math.round(x - y)}`);
-console.log(`Сумма ${Math.round(x + y)}`);
+console.log(`Произведение x*y=${Math.round(x * y)}`);
+console.log(`Частное x/y= ${Math.round(x / y)} или x/y=${Math.round(y / x)}`);
+console.log(`Разность x-y= ${Math.round(x - y)} или y-x=${Math.round(y - x)}`);
+console.log(`Сумма x+y=${Math.round(x + y)}`);
 
 //4.Напишите в переменных формулу для расчета з/п за июль с учетом,
 //что количество рабочий часов, количество рабочих дней в неделе и рейт
@@ -89,7 +89,12 @@ const str = prompt(
   "Мне нравится изучать Front-end",
   "Мне нравится изучать Front-end"
 );
-const strPrompt = prompt("Что вы любите изучать?");
+let strPrompt = prompt("Что вы еще любите изучать?");
+
+while (str.includes(strPrompt)) {
+  alert("Я это уже знаю");
+  strPrompt = prompt("Может быть вы еще, что-то любите изучать?");
+}
 const strNew = str.slice(0, 20);
 const result = `${strNew} ${strPrompt}`;
 console.log(result);
