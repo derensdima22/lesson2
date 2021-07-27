@@ -84,7 +84,8 @@ numRound < numPrompt
 //нравится изучать (примените для этого обратные кавычки ` `).
 //Отобразите результат в модальном окне.
 
-const str = "Мне нравится изучать Front-end";
+const str = prompt("Мне нравится изучать Front-end","Мне нравится изучать Front-end");
 const strPrompt = prompt("Что вы любите изучать?");
-
-console.log(`${str.slice(0, 20)} ${strPrompt}`);
+const strNew = str.slice(0, 20);
+const result = `${strNew} ${strPrompt}`;
+console.log(result);
