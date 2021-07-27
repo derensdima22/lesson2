@@ -36,13 +36,11 @@ console.log(`Сумма x+y=${Math.round(x + y)}`);
 // 30 или 31 день не нужно).
 
 const numberOfHous = +prompt("Сколько часов в день вы работаете?", "9");
-const numberOfWorkingDays = +prompt("Сколько дней в месяц вы рабоатете?", "22");
+const numberOfWorkingDays = +prompt("Сколько дней в неделе вы рабоатете?", "5");
 const ratePerHous = +prompt("Запрлата за один час ($)?", "30");
-
+const numMorkM = Math.ceil((30 / 7) * numberOfWorkingDays);
 console.log(
-  `Ваша зарплата за июль вышла ${
-    ratePerHous * numberOfHous * numberOfWorkingDays
-  }$ `
+  `Ваша зарплата за июль вышла ${ratePerHous * numberOfHous * numMorkM}$ `
 );
 
 //5.Напишите программу, которая без использования оператора сравнения определяет
@@ -57,8 +55,12 @@ Boolean(anyNumber % 2)
 //6.Напишите программу, которая проверяет, является ли значение,
 // введенное пользователем, числом.
 
-const anyChange = +prompt("Введите любое значение", "");
+//Вариант 1:
+let userNum = 33;
+typeof userNum === "number";
 
+//Вариант2:
+const anyChange = +prompt("Введите любое значение", "");
 if (isNaN(anyChange)) console.log("Вы ввели не число");
 else console.log("Вы ввели число");
 
@@ -72,8 +74,8 @@ const numRound = Math.round(numRandom * 100);
 const numPrompt = +prompt("Введите число", "");
 
 numRound < numPrompt
-  ? console.log(`Число 1-${numRound} меньше Числа 2-${numPrompt}`)
-  : console.log(`Число 1-${numRound} большше Числа 2-${numPrompt}`);
+  ? console.log(`Число 1-${numRound} < Числа 2-${numPrompt}`)
+  : console.log(`Число 1-${numRound} > Числа 2-${numPrompt}`);
 
 //8.Создайте переменную str и запишите в нее из prompt такое предложение
 //«Мне нравится изучать Front-end». Также создайте еще одну переменную и
