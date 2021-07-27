@@ -50,8 +50,9 @@ console.log(
 
 const anyNumber = +prompt("Введите люое чило", "");
 
-if (anyNumber % 2 === 0) console.log("Это четное число");
-else console.log("Это не четное число");
+Boolean(anyNumber % 2)
+  ? console.log("Это не четное число")
+  : console.log("Это не четное число");
 
 //6.Напишите программу, которая проверяет, является ли значение,
 // введенное пользователем, числом.
@@ -84,7 +85,10 @@ numRound < numPrompt
 //нравится изучать (примените для этого обратные кавычки ` `).
 //Отобразите результат в модальном окне.
 
-const str = prompt("Мне нравится изучать Front-end","Мне нравится изучать Front-end");
+const str = prompt(
+  "Мне нравится изучать Front-end",
+  "Мне нравится изучать Front-end"
+);
 const strPrompt = prompt("Что вы любите изучать?");
 const strNew = str.slice(0, 20);
 const result = `${strNew} ${strPrompt}`;
