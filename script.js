@@ -60,8 +60,10 @@ let userNum = 33;
 typeof userNum === "number";
 
 //Вариант2:
-const anyChange = +prompt("Введите любое значение", "");
-if (isNaN(anyChange)) console.log("Вы ввели не число");
+const anyChange = prompt("Введите любое значение", "");
+let anyChangeNew = Number(anyChange)
+if( anyChange === ""|| anyChange === null) console.log("не число")
+else if (isNaN(anyChangeNew)) console.log("Вы ввели не число");
 else console.log("Вы ввели число");
 
 //7.Запишите в переменную случайное число (Math.random()),
